@@ -1,5 +1,27 @@
 <div class="customer">
 <h2><%= customer.full_name %></h2>
-<p><strong>Phone Number:</strong><%= customer.phone_number %></p>
-<p><strong>Email:</strong><%= customer.email_address %></p>
+<p>
+	<strong>Phone Number:</strong>
+	<% if customer.phone_number.present? %>
+		<%= customer.phone_number %>
+	<% else %>
+		None
+	<% end %>
+</p>
+<p>
+	<strong>Email:</strong>
+	<% if customer.email_address.present? %>
+		<%= customer.email_address %>
+	<% else %>
+		None
+	<% end %>
+</p>
+<p>
+	<strong>Province:</strong>
+	<% if customer.province.present? %>
+		<%= customer.province.name %>
+	<% else %>
+		None
+	<% end %>
+</p>
 </div>
